@@ -103,7 +103,7 @@ ENV PYTHON_VERSION=3.6.1
 RUN git clone --depth 1 https://github.com/yyuu/pyenv.git ~/.pyenv && \
   rm -rfv /root/.pyenv/.git && \
   mkdir -p /root/.pyenv/cache && \
-  curl http://mirrors.sohu.com/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz > /root/.pyenv/cache/Python-${PYTHON_VERSION}.tar.xz && \
+  curl https://mirrors.aliyun.com/pypi/simple/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz > /root/.pyenv/cache/Python-${PYTHON_VERSION}.tar.xz && \
   export PYENV_ROOT="/root/.pyenv" && \
   export PATH="$PYENV_ROOT/bin:$PATH" && \
   eval "$(pyenv init -)" && \
