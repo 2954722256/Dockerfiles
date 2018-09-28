@@ -1,0 +1,16 @@
+version: '2'
+services:
+  jenkins:
+    restart: always
+    user: root
+    build: .
+    privileged: true
+    container_name: ${CONTAINER_NAME}
+    ports:
+        - ${PORT_OUT_8080}:8080
+        - ${PORT_OUT_8022}:8022
+        - ${PORT_OUT_50000}:50000
+    volumes:
+        - ${VOLUMES_HOME}:/var/jenkins_home:rw
+        - ${VOLUMES_ROOT}:/root:rw
+        - /var/run/docker.sock:/var/run/docker.sock:rw

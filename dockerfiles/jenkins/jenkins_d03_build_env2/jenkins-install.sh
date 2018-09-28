@@ -112,7 +112,7 @@ echo 'export PATH="./deps/bin:$PATH"' >> /root/.bashrc
 
 # "---  bpkg  ---"	
 echo "---  bpkg  ---"
-PATH ./deps/bin:$PATH
+export PATH="/root/./deps/bin:$PATH"
 
 
 
